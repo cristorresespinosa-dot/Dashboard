@@ -193,6 +193,7 @@ body{font-family:'Google Sans','Roboto',Arial,sans-serif;background:var(--bg);co
       <div class="ps-chip fl"><div class="ps-dot"></div>Freeland Power Talk</div>
       <div class="ps-chip lit"><div class="ps-dot"></div>Lab Idea Trailing</div>
       <div class="ps-chip ebc"><div class="ps-dot"></div>Explora BaseCamp</div>
+      <div class="ps-chip lit"><div class="ps-dot"></div>Lab Validation Sprint</div>
     </div>
     <div class="ps-vsep"></div>
     <div class="ps-group">
@@ -206,6 +207,7 @@ body{font-family:'Google Sans','Roboto',Arial,sans-serif;background:var(--bg);co
       <div class="ps-chip fl"><div class="ps-dot"></div>Freeland Pro</div>
       <div class="ps-chip lit"><div class="ps-dot"></div>Lab Idea Trailing</div>
       <div class="ps-chip ebc"><div class="ps-dot"></div>Explora BaseCamp</div>
+      <div class="ps-chip lit"><div class="ps-dot"></div>Lab Validation Sprint</div>
     </div>
   </div>
 </div>
@@ -216,6 +218,7 @@ body{font-family:'Google Sans','Roboto',Arial,sans-serif;background:var(--bg);co
     <button class="prog-btn all active" onclick="setProg('all',this)">📊 Todos los programas</button>
     <button class="prog-btn ebc"        onclick="setProg('ebc',this)">🌿 Explora BaseCamp</button>
     <button class="prog-btn lit"        onclick="setProg('lit',this)">💡 Lab Idea Trailing</button>
+    <button class="prog-btn lit"        onclick="setProg('labval',this)">🔬 Lab Validation Sprint</button>
     <button class="prog-btn fl"         onclick="setProg('flp',this)">⚡ Freeland Panel</button>
     <button class="prog-btn fl"         onclick="setProg('flpt',this)">⚡ Freeland Power Talk</button>
     <button class="prog-btn fl"         onclick="setProg('flws1',this)">⚡ Freeland Workshop 1</button>
@@ -307,10 +310,11 @@ const DATA =
     nombre: 'Lab Validation Sprint', clase: 'lit',
     periodos: {
       P1: null, ST1: null,
-      P2:  {total:38, aceptados:0, campus:[
-          {n:'Sin especificar', abr:'S/E', total:38, a:0}
+      P2:  {total:1, aceptados:0, campus:[
+          {n:'TEC Campus Guadalajara', abr:'GDL', total:1, a:0}
         ]},
-      ST2: null, P3: null,
+      ST2: null,
+      P3:  {total:0, aceptados:0, campus:[]},
     }
   },
   flp: {
@@ -376,7 +380,7 @@ const PROG_EN_PERIODO = {
   ST1: ['flws1','lit'],
   P2:  ['flpt','lit','ebc','labval'],
   ST2: ['flws2','lit'],
-  P3:  ['flpro','lit','ebc'],
+  P3:  ['flpro','lit','ebc','labval'],
 };
 
 const PROG_CLASE = {
